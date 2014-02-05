@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "addCourse";
+}
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+<div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+    
+    <form role="form" method ="post" action ="/Admin/addCourse1">
+       
+        <table>
+         <tr>
+             <td>
+              <label >Course Name </label>
+              <input type="text" name ="id"  required id ="id" style ="width:350px">
+            </td>
+         </tr>
+
+          <tr>
+              <td>
+              <label >Credit Hr </label>
+              <input type="text" name ="crdt"  required id ="name" style ="width:350px">
+              </td>
+          </tr>
+          <tr>
+              <td>
+               <label >Season </label>
+              <input type="text" name ="season"  required id ="name" style ="width:350px">
+               </td>     
+          </tr> 
+            <tr>
+              <td>
+               <label > Is Lab </label>
+              <input type="text" name ="isLab"  required id ="name" style ="width:350px">
+               </td>     
+          </tr> 
+            <tr>
+                <td>
+                <br><button class="btn btn-lg btn-primary btn-block" type="submit" style ="width:350px" id ="save">Save</button>
+              </td>
+          </tr>
+    </table>
+    </form>
+     
+</div>
+    @if(ViewBag.msg == 0 )
+    {
+        <h2>  User Not Added Successfully </h2>
+
+    }
+</div>

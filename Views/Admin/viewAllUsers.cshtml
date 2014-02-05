@@ -1,0 +1,39 @@
+﻿@model List<project.Models.users1>
+@{
+    ViewBag.Title = "viewAllUsers";
+}
+
+
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+    <div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+    
+     <table>
+         <tr>
+         <th> @Html.DisplayNameFor(model => model[0].userName) </th>
+         <th> @Html.DisplayNameFor(model => model[0].pwd) </th>
+         <th> @Html.DisplayNameFor(model => model[0].type) </th>
+         <th> @Html.DisplayNameFor(model => model[0].name) </th>
+         </tr>
+         @for (int i=0 ; i< Model.Count() ; i++) {
+         <tr>
+            <td>
+                @Html.DisplayFor( model => model[i].userName )
+            </td>
+              <td>
+                @Html.DisplayFor( model => model[i].pwd )
+              </td>
+              <td>
+                @Html.DisplayFor( model => model[i].type )
+             </td>
+             <td>
+                @Html.DisplayFor( model => model[i].name )
+             </td>          
+        </tr>          
+         }
+     </table>
+    @Html.ActionLink("Back","AdminHome")
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿@model List< project.Models.attendance>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+  div.padded {  
+      padding-top: 10px;  
+      padding-right: 15em;  
+      padding-bottom: 0.25in;  
+      padding-left: 15em; 
+      border-color:black;
+     
+       
+    }  
+ </style> 
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+<div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+<div class="padded">
+<table  >
+       <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+
+
+    
+    <tr>
+             <td>
+            @Html.DisplayFor(model => model[0].courseId)
+              
+             </td>
+
+        </tr>
+    <tr>
+        <td>
+
+            Your attendance in course is Presents :  @Html.DisplayFor(model => model[0].presents)
+                                         Absents :   @Html.DisplayFor(model => model[0].absents)
+        </td>
+
+
+    </tr>
+</table>
+</div>
+</div>
+    </div>

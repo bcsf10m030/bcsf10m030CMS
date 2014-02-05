@@ -1,0 +1,50 @@
+@model List<project.Models.attendance>
+
+
+
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+<div class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+ 
+
+        <form name="input" action="~/Teacher/Attendance" method="post" >
+           <table >
+               <tr>
+                   <td><h3> RollNum </h3></td>
+                    <td> <h3> Name     </h3></td>
+                    <td><h3> Attendance </h3></td>
+
+               </tr>
+              
+           
+            @if(Model.Count>0)
+            {
+            for(int i=0 ; i<Model.Count ; i++)
+            {
+                
+                   <tr>
+                      <td>   @Html.DisplayFor(model=>model[i].studentId)   </td>
+                      <td>   @Html.DisplayFor(model=>model[i].student.users1.name)  </td>
+                       
+                      <td>   <input type="checkbox" name="marked" value="@Model[i].studentId.ToString()" /> </td>
+
+                </tr>
+                
+            }
+            <tr>
+                <td>
+            <input type="hidden" name="tname" value="@Model[0].tName" />
+            <input type="hidden" name="course" value="@Model[0].courseId" />
+               </td>
+            </tr>
+            }
+            
+           </table> 
+          
+           <input type ="submit" name="Submit Attendance"  />
+           </form>
+   
+    </div>
+    </div>

@@ -1,0 +1,58 @@
+@model List<project.Models.enrolledStudent>
+
+<script>   
+
+    $(document).ready(function () {
+
+        $('#search').click(function () {
+
+            var course = $('#searchbar').val();
+            var roll = @Model.First().userName
+                $('#mainDiv').append(roll)
+            $.getJSON("Student/getData?course=" + course+"&roll="+roll, function (data) {
+
+                $.each(data, function (i, er) {
+                    $('#mainDiv').append(
+                        er.courseName
+
+
+                        )
+
+                });
+
+            });
+        });
+    });
+
+
+</script>
+</head>
+    <body>
+       <div class ="wrapper col3">
+    <h2>Enter course to be searched <input type="text" id="searchbar"/> <input type="button" id="search" /> </h2>       
+
+   <div id="mainDiv"></div>
+    <h1>   Courses enrolled are following </h1>
+           @for (int i=0 ; i<Model.Count ; i++) 
+           {
+           <ul>
+                
+               <li >  @Html.DisplayFor(model => model[i].courseName)
+                   <ul>@Html.ActionLink("GradeBook", "gradeBook", new { n =Model[i].userName , c=Model[i].courseName }) </ul>
+                   <ul>@Html.ActionLink("Attendance", "Attendance", new { n =Model[i].userName, c=Model[i].courseName }) </ul>
+            
+              </li> 
+              
+               
+               <br />
+               <br />
+               <br />
+               <br />
+
+           </ul>
+           }
+
+        </div>
+
+        </body>
+   </html>

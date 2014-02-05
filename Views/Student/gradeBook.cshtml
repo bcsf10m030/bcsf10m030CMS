@@ -1,0 +1,60 @@
+@model List<project.Models.enrolledStudent>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+<style>
+      div.padded {  
+      padding-top: 10px;  
+      padding-right: 15em;  
+      padding-bottom: 0.25in;  
+      padding-left: 15em; 
+      border-color:black;
+     
+       
+    }  
+ </style> 
+
+   <div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+<div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+   <div class="padded">
+    <table  >
+       <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+             <tr>
+             <td>
+           
+               Course Name : @Html.DisplayFor(model => model[0].courseName)
+              
+             </td>
+             </tr>
+
+             <tr>
+                 <td>
+                  Mid Marks : @Html.DisplayFor(model => model[0].mid)
+                 </td>
+            </tr>
+             <tr>
+                 <td>
+                  Final Marks : @Html.DisplayFor(model => model[0].final)
+                 </td>
+            </tr>
+            <tr>
+                <td>
+                  Sessionals : @Html.DisplayFor(model => model[0].sessional)
+                </td>
+             </tr>
+    </table>
+        </div> 
+        
+  </div>
+       </div>

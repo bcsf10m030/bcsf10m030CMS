@@ -1,0 +1,38 @@
+﻿@model List<project.Models.course>
+@{
+    ViewBag.Title = "viewAllCourses";
+}
+
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+    <div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+    
+     <table>
+         <tr>
+         <th> @Html.DisplayNameFor(model => model[0].courseName) </th>
+         <th> @Html.DisplayNameFor(model => model[0].creditHr) </th>
+         <th> @Html.DisplayNameFor(model => model[0].season) </th>
+         <th> @Html.DisplayNameFor(model => model[0].isLab) </th>
+         </tr>
+         @for (int i=0 ; i< Model.Count() ; i++) {
+         <tr>
+            <td>
+                @Html.DisplayFor( model => model[i].courseName )
+            </td>
+              <td>
+                @Html.DisplayFor( model => model[i].creditHr )
+              </td>
+              <td>
+                @Html.DisplayFor( model => model[i].season )
+             </td>
+             <td>
+                @Html.DisplayFor( model => model[i].isLab )
+             </td>          
+        </tr>
+         }
+     </table>
+    @Html.ActionLink("Back","AdminHome")
+    </div>
+</div>

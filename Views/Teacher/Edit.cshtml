@@ -1,0 +1,46 @@
+﻿@model project.Models.enrolledStudent
+ @{   ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h3>Follwoing are the student's current grades</h3>
+
+@using (Html.BeginForm()) {
+<table>
+    <tr>
+        <td>
+            @Model.userName
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            @Html.EditorFor(model=>model.sessional)
+           
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.EditorFor(model=>model.mid)
+        </td>
+     </tr>
+    <tr>
+        <td>
+            @Html.EditorFor(model=>model.final)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="hidden" value="@Model.userName" name="r" />
+            <input type="hidden" value="@Model.courseName name="c" />
+            <input type="hidden" value="@Model.tName" name="t" />
+        <input type="submit" value="Save" />
+        </td>
+
+
+    </tr>
+    
+</table>
+ 
+}

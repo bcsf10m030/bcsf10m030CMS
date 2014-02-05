@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f2d36516e64d4b8f99efbf1299fb2383" Name="Diagram1">
+        <EntityTypeShape EntityType="PUCITModel3.attendance" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.course" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.enrolledStudent" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.student" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.Table" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.Teacher" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.TeacherCourse" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PUCITModel3.users1" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="PUCITModel3.FK_attendance_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_attendance_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_enrolledStudents_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_TeacherCourse_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_enrolledStudents_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_student_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_Teacher_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="PUCITModel3.FK_TeacherCourse_ToTable_1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

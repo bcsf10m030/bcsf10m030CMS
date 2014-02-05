@@ -1,0 +1,33 @@
+@model List< project.Models.TeacherCourse>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <h1>  Currrently taught courses are  </h1>
+        <div style ="background-color:#8B785F">
+        <br />
+        <br />
+        <br />
+        
+        @for(int i=0 ; i <Model.Count ; i++)
+        {
+           <ul>
+                @Html.DisplayFor(model => model[i].courseName)
+               <li >
+                   
+                   <ul>@Html.ActionLink("GradeBook", "Grades", new { n = Model[i].teacherName , c=Model[i].courseName }) </ul>
+                   <ul>@Html.ActionLink("Attendance", "Attendance", new { n =Model[i].teacherName, c=Model[i].courseName }) </ul>
+               </li>
+
+               <br />
+               <br />
+               <br />
+               <br />
+
+           </ul>
+        }
+            </div>
+
+
+        </div>

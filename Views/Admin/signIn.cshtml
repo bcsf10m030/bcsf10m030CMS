@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "signIn";
+}
+
+
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+<div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+        <h2>Admin Login Here</h2>
+    <form action="/Admin/ValidateAdmin " method="post" >
+       <table>
+             <tr>
+                 <td>
+                    <label for="Adminname">Username:
+                    <input type="text" name="adminname" id="adminName" value="" />
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Adminpass">Password:
+                    <input type="password" name="adminpass" id="adminpass" value="" />
+                    </label>
+                </td>
+           </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="teacherlogin" id="teacherlogin" value="Login" onclick="f1"/>
+                    <div id="result"> </div>
+               </td>
+            </tr>
+              
+            </table>
+         </form>
+      </div>
+</div>
+

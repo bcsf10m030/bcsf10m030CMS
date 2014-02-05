@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "addOneUser";
+}
+@model project.Models.users1
+
+
+<div style ="background-color:#8B785F">
+<br />
+<br />
+<br />
+<div align="center" class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+    
+    <form class="form-signin" role="form" method ="post" action ="/Admin/SaveInfo">
+       
+        <table>
+         <tr>
+             <td>
+              <label >UserID </label>
+              <input type="text" name ="uid"  required id ="id" style ="width:350px">
+            </td>
+         </tr>
+
+          <tr>
+              <td>
+              <label >Full Name </label>
+              <input type="text" name ="name"  required id ="name" style ="width:350px">
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <label>User Type </label>
+                <select class="selectpicker" id="type" name ="type" style ="width:300px">
+                <option>Select Type</option>
+                <option>teacher</option>
+                <option>student</option>
+                </select><br>  
+               </td>     
+          </tr> 
+            <tr>
+                <td>
+                <br><button class="btn btn-lg btn-primary btn-block" type="submit" style ="width:350px" id ="save">Save</button>
+              </td>
+          </tr>
+    </table>
+    </form>
+     
+</div>
+    @if(ViewBag.msg == 0 )
+    {
+        <h2>  User Not Added Successfully </h2>
+
+    }
+</div>

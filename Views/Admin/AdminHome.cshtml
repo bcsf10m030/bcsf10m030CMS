@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "AdminHome";
+}
+<div style ="background-color:#8B785F">
+<h2>AdminHome</h2>
+<div class="wrapper col0" style="width:800px ; margin:auto ;text-align:center">
+    <table>
+        <tr>
+            <td>
+            @Html.ActionLink("View All Current Users","viewAllUsers")
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.ActionLink("View All Current Courses","viewAllCourses")
+            </td>
+        </tr>
+        <tr>
+            <td>
+            @Html.ActionLink("Add Users","addUser")
+            </td>
+        </tr>
+         <tr>
+            <td>
+            @Html.ActionLink("Add New Course ","addCourse")
+            </td>
+        </tr>
+         <tr>
+            <td>
+            @Html.ActionLink("Add student in Course ","courseToStudent")
+            </td>
+        </tr>
+        
+    </table>
+</div>
+</div>
